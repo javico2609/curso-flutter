@@ -2,19 +2,19 @@ import 'dart:core';
 import 'demo_lib.dart';
 
 /**
-  1 - Numbers
-     int
-     double
+    1 - Numbers
+    int
+    double
 
-  2 - Strings
-  3 - Booleans
-  4 - Sets
-  5 - List | Arrays
-  6 - Maps
-  7 - Runes ()
-  8 - Symbols  
+    2 - Strings
+    3 - Booleans
+    4 - Sets
+    5 - List | Arrays
+    6 - Maps
+    7 - Runes ()
+    8 - Symbols
 
-  # Todos los tipos de datos en dart heredan de Object y su valor por defecto es null 
+    # Todos los tipos de datos en dart heredan de Object y su valor por defecto es null
  */
 
 void main() {
@@ -33,17 +33,40 @@ void main() {
   bool isFinished = true;
 
   // Sets
-  Set<String> playersName = { 'PlayerOne', 'PlayerTwo', 'PlayerTwo' }; // Colección de objetos donde cada objeto solo existe una vez.
-  Set<dynamic> playersObj = { new Player('PlayerOne'), new Player('PlayerTwo'), new Player('PlayerTwo') };
+  Set<String> playersName = {
+  'PlayerOne',
+  'PlayerTwo',
+  'PlayerTwo'
+  }; // Colección de objetos donde cada objeto solo existe una vez.
+  Set<dynamic> playersObj = {
+  new Player('PlayerOne'),
+  new Player('PlayerTwo'),
+  new Player('PlayerTwo')
+  };
+
   print(playersName);
   print(playersObj);
 
+  // List | Arrays
+  List<double> records = [25.3, 14.3, 25.4];
+  print(records);
+
+  records =
+  [
+  ...records,
+  ...[ 45.6,58.6 ],
+  if(isFinished) 455,
+  for(double i = 0; i < 5; i++) i,
+  for(double i = 0; i < 5; i++) if(i %2 == 0) i,
+  ];
+
+  print(records);
   // Maps
   Map<String, String> gifts = {
-    // Key:    Value
-    'first': 'partridge',
-    'second': 'turtledoves',
-    'fifth': 'golden rings'
+  // Key:    Value
+  'first': 'partridge',
+  'second': 'turtledoves',
+  'fifth': 'golden rings'
   };
 
   print(gifts);
@@ -56,8 +79,7 @@ void main() {
   Symbol clsToSearch = new Symbol("Foo");
   // class name stored as Symbol
 
-  if(existClassAvailableInLibrary(lib, clsToSearch))
-    print("class found..");
+  if (existClassAvailableInLibrary(lib, clsToSearch)) print("class found..");
 }
 
 class Player {
