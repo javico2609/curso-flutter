@@ -1,0 +1,25 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+
+# IDEs and editors
+/dart/.idea
+/dart/.vscode
+.project
+.classpath
+*.launch
+.settings/
+
+#NETBEANS
+/nbproject
+
+#VS
+/dart/.vs
+
+#A: linked to visual studio, don't think it's to be checked
+.vs
+.vs/slnx.sqlite
+
+tools/
