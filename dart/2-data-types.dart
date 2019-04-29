@@ -1,5 +1,6 @@
 import 'dart:core';
 import 'demo_lib.dart';
+import 'player.dart';
 
 /**
     1 - Numbers
@@ -34,14 +35,14 @@ void main() {
 
   // Sets
   Set<String> playersName = {
-  'PlayerOne',
-  'PlayerTwo',
-  'PlayerTwo'
+    'PlayerOne',
+    'PlayerTwo',
+    'PlayerTwo'
   }; // Colección de objetos donde cada objeto solo existe una vez.
   Set<dynamic> playersObj = {
-  new Player('PlayerOne'),
-  new Player('PlayerTwo'),
-  new Player('PlayerTwo')
+    new Player('Player1'),
+    new Player('Player2'),
+    new Player('Player2')
   };
 
   print(playersName);
@@ -51,22 +52,21 @@ void main() {
   List<double> records = [25.3, 14.3, 25.4];
   print(records);
 
-  records =
-  [
-  ...records,
-  ...[ 45.6,58.6 ],
-  if(isFinished) 455,
-  for(double i = 0; i < 5; i++) i,
-  for(double i = 0; i < 5; i++) if(i %2 == 0) i,
+  records = [
+    ...records,
+    ...[45.6, 58.6],
+    if (isFinished) 455,
+    for (double i = 0; i < 5; i++) i,
+    for (double i = 0; i < 5; i++) if (i % 2 == 0) i,
   ];
 
   print(records);
   // Maps
   Map<String, String> gifts = {
-  // Key:    Value
-  'first': 'partridge',
-  'second': 'turtledoves',
-  'fifth': 'golden rings'
+    // Key:    Value
+    'first': 'partridge',
+    'second': 'turtledoves',
+    'fifth': 'golden rings'
   };
 
   print(gifts);
@@ -80,23 +80,4 @@ void main() {
   // class name stored as Symbol
 
   if (existClassAvailableInLibrary(lib, clsToSearch)) print("class found..");
-}
-
-class Player {
-  final String name;
-
-  const Player(this.name);
-
-  @override
-  bool operator ==(other) {
-    return name == other.name;
-  }
-
-  @override
-  int get hashCode => name.hashCode;
-
-  @override
-  String toString() {
-    return name;
-  }
 }
